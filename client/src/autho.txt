@@ -1,0 +1,6 @@
+Client ID
+985974388232-na3n5t8lhtf13fl0r3vuugsg3umofb2s.apps.googleusercontent.com
+Client secret
+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
+Creation date
+November 17, 2023 at 12:10:37 AM GMT-7

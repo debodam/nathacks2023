@@ -1,0 +1,38 @@
+.heading {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 30vh; /* Set the height to cover the entire viewport */
+  background: #50439175;
+  border-bottom-left-radius: 20px; /* Adjust the radius as needed */
+  border-bottom-right-radius: 20px; /* Adjust the radius as needed */
+}
+
+.heading-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  height: 15%; /* Set the height to 100% */
+}
+
+.heading-logo {
+  width: 40%;
+  top: 0;
+}
+/* Add this style for the button container */
+
+.google {
+  position: relative;
+  margin-top: 20px;
+  height: 60vh;
+  width: 100%;
+  overflow: hidden;
+  background: #d9d9d9;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
