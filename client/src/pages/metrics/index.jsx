@@ -1,12 +1,19 @@
 import React, { useEffect } from "react";
 import { googleLogout } from "@react-oauth/google";
+import "./style.css";
 import logo from "../../assets/logo3.png";
 import io from "socket.io-client";
 const socket = io("http://localhost:5000");
 
+const Card = ({ imageSrc, word }) => (
+  <div className="card">
+    <img src={imageSrc} alt={word} />
+    <p>{word}</p>
+  </div>
+);
+
 const Metrics = () => {
   useEffect(() => {
-    console.log("hello");
     socket.on("connect", () => {
       console.log("Connected to Flask server via Socket.IO");
     });
@@ -60,8 +67,23 @@ const Metrics = () => {
           {/* You can add more buttons here */}
         </div>
       </div>
-      <h1>Welcome, {user?.profileObj?.name}!</h1>
-      <p>This is your welcome page content.</p>
+      {/* Welcome Section */}
+      <div className="welcome">
+        <h1>Welcome, Debo Dam!</h1>
+        <div className="scroll-down1"></div>
+      </div>
+      {/* Metrics Section */}
+      <h1 className="metrics-title">Metrics Summary</h1>
+      <div className="metrics" id="metrics">
+        <div className="metrics-heading">
+          <div className="cards">
+            <Card imageSrc="path_to_image1.jpg" word="Card 1" />
+            <Card imageSrc="path_to_image2.jpg" word="Card 2" />
+            <Card imageSrc="path_to_image3.jpg" word="Card 3" />
+            {/* Add more Card components as needed */}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

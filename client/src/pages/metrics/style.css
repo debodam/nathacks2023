@@ -37,3 +37,187 @@
   border: none;
   cursor: pointer;
 }
+
+.welcome {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+  overflow: hidden;
+  height: 50vh; /* Set the height to cover the entire viewport */
+  background: #d9d9d9;
+  border-top-left-radius: 20px; /* Adjust the radius as needed */
+  border-top-right-radius: 20px; /* Adjust the radius as needed */
+  border-bottom-left-radius: 20px; /* Adjust the radius as needed */
+  border-bottom-right-radius: 20px; /* Adjust the radius as needed */
+}
+
+.welcome-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  height: 15%; /* Set the height to 100% */
+}
+
+/* Add this style for the button container */
+.welcome h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-family4);
+  color: white;
+  font-size: 70px;
+}
+
+.scroll-down1 {
+  position: absolute;
+  bottom: 10px; /* Adjust this value to position it as needed */
+  top: 75%;
+  left: 50%;
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  z-index: 100;
+  text-decoration: none;
+  text-shadow: 0;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid #fff;
+  border-right: 5px solid #fff;
+  transform: translateX(-50%) rotate(45deg);
+  animation: jump_up_down 2s ease-in-out infinite; /* Adjust the duration */
+}
+
+/* Animated scroll arrow jump-up-and-down animation */
+@keyframes jump_up_down {
+  0%,
+  100% {
+    transform: translate(0, 0) rotate(45deg);
+  }
+  50% {
+    transform: translate(0, 10px) rotate(45deg);
+  }
+}
+.metrics {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background: #d9d9d9;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.metrics h1 {
+  text-align: center;
+  font-family: var(--font-family4);
+  font-size: 75px;
+  color: #111;
+  margin-top: 0; /* Remove default margin */
+}
+
+.metrics-heading {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 2rem 1rem;
+  color: white;
+}
+
+.metrics-title {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family4);
+  font-size: 75px;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4rem 2rem 2rem;
+  color: black;
+}
+
+.metrics-heading p {
+  font-size: 25px;
+  line-height: 45px;
+  font-weight: 600;
+  font-family: var(--font-family4);
+  color: #111;
+  text-align: center;
+}
+
+.metrics-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 650px) {
+  .metrics-services .metrics__services-container__services {
+    flex-direction: column;
+  }
+
+  .metrics-services .metrics__services-container__services-text {
+    margin-top: 0.5rem;
+  }
+
+  .metrics-heading h1 {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .metrics-heading p {
+    font-size: 28px;
+    line-height: 40px;
+  }
+  .metrics-rows {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .metrics-services .metrics__services-container__services {
+    margin: 1rem 0;
+    min-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .metrics-rows {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .metrics-link {
+    margin: 5px 0;
+  }
+}
+
+/* Updated style for the cards container */
+.cards {
+  display: flex;
+  justify-content: space-around; /* Adjust as needed */
+  flex-wrap: wrap;
+  margin-top: 20px; /* Add spacing between the metrics title and cards */
+}
+
+/* Updated style for each card */
+.card {
+  width: 150px; /* Adjust the width as needed */
+  margin-bottom: 30px; /* Increased margin for more space between cards */
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Add rounded corners as desired */
+}
+
+.card p {
+  margin-top: 10px; /* Add spacing between image and word */
+}

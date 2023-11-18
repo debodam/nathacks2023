@@ -1,24 +1,29 @@
-import React from "react";
+import { React, createContext, useState } from "react";
 import "./style.css";
 import logo from "../../assets/logo3.png";
 import { useNavigate } from "react-router-dom";
 import { useGoogleLogin } from "@react-oauth/google";
 
-const Homepage = () => {
-  const navigate = useNavigate();
+export const AuthContext = createContext();
 
+const Homepage = () => {
+  const [userTokenResponse, setUserTokenResponse] = useState("");
+  const navigate = useNavigate();
   const LoginButton = () => {
     const login = useGoogleLogin({
       onSuccess: (codeResponse) => {
-        console.log(codeResponse);
+        setUserTokenResponse(codeResponse);
         navigate("/metrics"); // Redirect to the welcome page after successful login
       },
       flow: "auth-code",
     });
+
     return (
-      <button className="google-signin-button" onClick={() => login()}>
-        SIGN IN
-      </button>
+      <div>
+        <button className="google-signin-button" onClick={() => login()}>
+          SIGN IN
+        </button>
+      </div>
     );
   };
 
