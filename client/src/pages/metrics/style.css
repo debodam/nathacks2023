@@ -1,0 +1,39 @@
+.hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  height: 40vh; /* Set the height to cover the entire viewport */
+  background: #50439175;
+  border-bottom-left-radius: 20px; /* Adjust the radius as needed */
+  border-bottom-right-radius: 20px; /* Adjust the radius as needed */
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  height: 15%; /* Set the height to 100% */
+}
+
+.hero-logo {
+  width: 60%;
+  top: 0;
+}
+/* Add this style for the button container */
+.google-signin-button {
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  display: flex;
+  color: #50439175; /* Change this to your desired text color */
+  font-family: var(--font-family4);
+  font-size: 20px;
+  background-color: #d9d9d9; /* Add other styling as needed */
+  padding: 5px 20px; /* Adjust the padding as needed */
+  border-radius: 15px;
+  border: none;
+  cursor: pointer;
+}

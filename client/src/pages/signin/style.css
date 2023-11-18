@@ -36,3 +36,57 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
 }
+
+.google {
+  position: relative;
+  margin-top: 15px;
+  width: 100%;
+  overflow: hidden;
+  height: 50vh; /* Set the height to cover the entire viewport */
+  background: #d9d9d9;
+  border-top-left-radius: 20px; /* Adjust the radius as needed */
+  border-top-right-radius: 20px; /* Adjust the radius as needed */
+  border-bottom-left-radius: 20px; /* Adjust the radius as needed */
+  border-bottom-right-radius: 20px; /* Adjust the radius as needed */
+}
+
+.google-heading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 80%;
+  height: 15%; /* Set the height to 100% */
+}
+
+/* Add this style for the button container */
+.google-signin-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Add styles for the buttons if needed */
+/* Google Sign-In Button Styles */
+/* Google Sign-In Button Styles */
+.google-signin-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  background-color: #4285f4; /* Google Blue */
+  color: #ffffff; /* Text color */
+  font-size: 14px; /* Text font size */
+  font-weight: bold; /* Text font weight */
+  border: none;
+  border-radius: 4px;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+/* Hover Effect */
+.google-signin-button:hover {
+  background-color: #3b78e7; /* Darker Google Blue on hover */
+}

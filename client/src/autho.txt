@@ -1,6 +1,8 @@
 Client ID
-985974388232-na3n5t8lhtf13fl0r3vuugsg3umofb2s.apps.googleusercontent.com
+985974388232-gte26u89u6qeiuvp5aotpg1i5gnacoqv.apps.googleusercontent.com
 Client secret
-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
+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
 Creation date
-November 17, 2023 at 12:10:37 AM GMT-7
+November 17, 2023 at 2:31:22 AM GMT-7
+Status
+ Enabled
