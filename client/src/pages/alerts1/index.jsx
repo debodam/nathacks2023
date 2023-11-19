@@ -2,29 +2,29 @@ import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./style.css";
 import logo from "../../assets/logo3.png";
-import io from "socket.io-client";
 
 const Alerts1 = () => {
   const navigate = useNavigate();
-  const [showAlert, setShowAlert] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    const socket = io("http://127.0:5000"); // Update with your Flask server address
-
-    socket.on("alert", () => {
-      // Display the alert when the threshold is crossed
-      console.log("Alert event received");
-      setShowAlert(true);
-    });
+    // Show a pop-up after 10 seconds
+    const popupTimeout = setTimeout(() => {
+      setShowModal(true);
+    }, 10000);
 
     return () => {
-      socket.disconnect();
+      clearTimeout(popupTimeout); // Clear the timeout on component unmount
     };
   }, []);
 
   const handleDisconnect = () => {
     // Add any necessary logic before navigating, if needed
     navigate("/");
+  };
+
+  const handleCloseModal = () => {
+    setShowModal(false);
   };
 
   return (
@@ -45,11 +45,13 @@ const Alerts1 = () => {
           </button>
         </div>
       </div>
-      {/* Display Alert */}
-      {showAlert && (
-        <div className="alert-popup">
-          <p>Threshold crossed! Display your alert message here.</p>
-          <button onClick={() => setShowAlert(false)}>Close Alert</button>
+      {/* Styled Modal */}
+      {showModal && (
+        <div className="modal">
+          <div className="modal-content">
+            <p>It looks like your tired! It might be time to take a break.😴</p>
+            <button onClick={handleCloseModal}>CLOSE</button>
+          </div>
         </div>
       )}
     </div>

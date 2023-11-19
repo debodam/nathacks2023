@@ -2,7 +2,9 @@ import React, { useEffect } from "react";
 import { googleLogout } from "@react-oauth/google";
 import "./style.css";
 import logo from "../../assets/logo3.png";
-import eeggraph from "../../assets/eeg_graph.png";
+import eeggraph from "../../assets/eeggraph.png";
+import statisticgraph from "../../assets/statisticgraph.png";
+import averagegraph from "../../assets/averagegraph.png";
 import io from "socket.io-client";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
@@ -88,10 +90,9 @@ const Metrics = () => {
       <div className="metrics" id="metrics">
         <div className="metrics-heading">
           <div className="cards">
-            <Card imageSrc="../../assets/eeg_graph.png" word="EEG Grap" />
-            <Card imageSrc="path_to_image2.jpg" word="Card 2" />
-            <Card imageSrc="path_to_image3.jpg" word="Card 3" />
-            {/* Add more Card components as needed */}
+            <Card imageSrc={eeggraph} word="EEG Graphs" />
+            <Card imageSrc={statisticgraph} word="Previous Statistics" />
+            <Card imageSrc={averagegraph} word="Key Averages" />
           </div>
         </div>
       </div>

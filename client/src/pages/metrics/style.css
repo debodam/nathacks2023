@@ -201,25 +201,42 @@
   display: flex;
   justify-content: space-around; /* Adjust as needed */
   flex-wrap: wrap;
-  margin-top: 20px; /* Add spacing between the metrics title and cards */
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 /* Updated style for each card */
 .card {
-  width: 150px; /* Adjust the width as needed */
-  margin-bottom: 30px; /* Increased margin for more space between cards */
+  width: 400px; /* Adjust the width as needed */
+  height: 240px; /* Adjust the height as needed */
+  border: 1.5px solid #b4b2b2; /* Add a black outline */
+  margin-right: 20px;
+  margin-bottom: 2px; /* Increased margin for more space between cards */
   text-align: center;
+  border-radius: 20px; /* Increased border-radius for a curved outline */
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out; /* Added transition for the pop-out effect */
+  cursor: pointer;
 }
 
 .card img {
   width: 100%;
-  height: auto;
-  border-radius: 8px; /* Add rounded corners as desired */
+  height: 80%;
+  border-top-left-radius: 20px; /* Adjust the top-left corner */
+  border-top-right-radius: 20px; /* Adjust the top-right corner */
 }
 
 .card p {
-  margin-top: 10px; /* Add spacing between image and word */
+  margin-top: 0px; /* Add spacing between image and word */
+  border-bottom-left-radius: 20px; /* Adjust the top-left corner */
+  border-bottom-right-radius: 20px; /* Adjust the top-right corner */
 }
+
+/* Added hover effect */
+.card:hover {
+  transform: scale(1.1); /* Adjust the scale factor for the pop-out effect */
+}
+
 .welcome {
   position: relative;
   margin-top: 15px;
@@ -270,12 +287,10 @@
   margin-top: 15px;
   width: 100%;
   overflow: hidden;
-  height: 50vh; /* Set the height to cover the entire viewport */
+  height: 20vh; /* Set the height to cover the entire viewport */
   background: #50439175;
   border-top-left-radius: 20px; /* Adjust the radius as needed */
   border-top-right-radius: 20px; /* Adjust the radius as needed */
-  border-bottom-left-radius: 20px; /* Adjust the radius as needed */
-  border-bottom-right-radius: 20px; /* Adjust the radius as needed */
   padding: 20px; /* Adjust the padding as needed */
 }
 
