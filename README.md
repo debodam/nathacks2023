@@ -4,7 +4,7 @@
 
 ## Overview
 
-Welcome to our project for Nathacks 2023! We are a revolutionary response to the alarming issue of drowsy driving, claiming countless lives annually.
+Welcome to our project for Nathacks 2023! DriveAwake is a revolutionary response to the alarming issue of drowsy driving, claiming countless lives annually.
 
 ## Team Members
 
