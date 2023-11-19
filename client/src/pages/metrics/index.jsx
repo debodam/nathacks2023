@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { googleLogout } from "@react-oauth/google";
 import "./style.css";
 import logo from "../../assets/logo3.png";
+import eeggraph from "../../assets/eeg_graph.png";
 import io from "socket.io-client";
 import { useNavigate } from "react-router-dom"; // Import useNavigate
 
@@ -55,7 +56,7 @@ const Metrics = () => {
     localStorage.removeItem("react-oauth-google-user");
 
     // Redirect to the homepage
-    window.location.href = "/homepage";
+    window.location.href = "/";
 
     // You can use the userName variable as needed, for example, logging it
     console.log(`Logout successful. User: ${userName}`);
@@ -87,7 +88,7 @@ const Metrics = () => {
       <div className="metrics" id="metrics">
         <div className="metrics-heading">
           <div className="cards">
-            <Card imageSrc="path_to_image1.jpg" word="Card 1" />
+            <Card imageSrc="../../assets/eeg_graph.png" word="EEG Grap" />
             <Card imageSrc="path_to_image2.jpg" word="Card 2" />
             <Card imageSrc="path_to_image3.jpg" word="Card 3" />
             {/* Add more Card components as needed */}
