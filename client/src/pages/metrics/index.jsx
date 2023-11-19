@@ -3,6 +3,8 @@ import { googleLogout } from "@react-oauth/google";
 import "./style.css";
 import logo from "../../assets/logo3.png";
 import io from "socket.io-client";
+import { useNavigate } from "react-router-dom"; // Import useNavigate
+
 const socket = io("http://localhost:5000");
 
 const Card = ({ imageSrc, word }) => (
@@ -13,6 +15,14 @@ const Card = ({ imageSrc, word }) => (
 );
 
 const Metrics = () => {
+  const navigate = useNavigate(); // Define useNavigate
+
+  // Move handleConnectClick outside the useEffect
+  const handleConnectClick = () => {
+    // Navigate to "/alerts1" when the "CONNECT DEVICE" button is clicked
+    navigate("/alerts1");
+  };
+
   useEffect(() => {
     socket.on("connect", () => {
       console.log("Connected to Flask server via Socket.IO");
@@ -26,7 +36,8 @@ const Metrics = () => {
     return () => {
       socket.disconnect(); // Clean up on unmount
     };
-  }, []);
+  }, [navigate]); // Include navigate in the dependency array
+
   // Retrieve user information from local storage
   const storedUser = localStorage.getItem("react-oauth-google-user");
 
@@ -52,7 +63,6 @@ const Metrics = () => {
 
   return (
     <div>
-      {" "}
       {/* Hero Section */}
       <div className="hero">
         <div className="section__padding">
@@ -82,6 +92,14 @@ const Metrics = () => {
             <Card imageSrc="path_to_image3.jpg" word="Card 3" />
             {/* Add more Card components as needed */}
           </div>
+        </div>
+      </div>
+      {/* Connect Button */}
+      <div className="connect2">
+        <div className="connect2-button">
+          <button className="button2" onClick={handleConnectClick}>
+            CONNECT DEVICE
+          </button>
         </div>
       </div>
     </div>
