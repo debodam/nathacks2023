@@ -103,7 +103,7 @@ const Homepage = () => {
           <div className="track-heading fade-in-section">
             <p>
               Unlock comprehensive metrics in the Metrics section. Explore past
-              EEG graphs, track averages, and access key statistics for safer
+              EOG graphs, track averages, and access key statistics for safer
               travels. Sign in now to view and analyze data patterns, enhancing
               focus and driving securely.
             </p>

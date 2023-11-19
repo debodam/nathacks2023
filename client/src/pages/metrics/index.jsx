@@ -90,7 +90,7 @@ const Metrics = () => {
       <div className="metrics" id="metrics">
         <div className="metrics-heading">
           <div className="cards">
-            <Card imageSrc={eeggraph} word="EEG Graphs" />
+            <Card imageSrc={eeggraph} word="EOG Graphs" />
             <Card imageSrc={statisticgraph} word="Previous Statistics" />
             <Card imageSrc={averagegraph} word="Key Averages" />
           </div>
